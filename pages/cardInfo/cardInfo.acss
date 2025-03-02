@@ -1,0 +1,6 @@
+.container {
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  width: 100vh;
+}

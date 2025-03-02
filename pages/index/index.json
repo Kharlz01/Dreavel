@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "option": "/components/option/option",
+    "info": "/components/info/info"
+  }
+}

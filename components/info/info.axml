@@ -1,0 +1,32 @@
+<view class="main-container">
+  <view a:if="{{ !ref }}" class="container">
+    <image
+      a:if="{{!myInfo.pic}}"
+      class="place-image"
+      src="../../pages/images/river.png"
+      mode="aspectFill"
+    />
+    <image a:else class="place-image" src="{{myInfo.pic}}" mode="aspectFill" />
+    <view>
+      <text class="place-title">{{myInfo.name}}</text>
+    </view>
+    <view class="card-description">
+      <text class="place-description">{{myInfo.description}}</text>
+    </view>
+    <view class="icon-container">
+      <text a:if="{{myInfo.status == "Visitado"}}" class="status-icon green">V</text>
+      <text a:else class="status-icon orange">P</text>
+      <image class="edit-button" onTap="deleteMenu" src="../../pages/images/bin.png" />
+      <image class="edit-button" onTap="navigateToEdit" src="../../pages/images/pen.png" />
+    </view>
+  </view>
+  <view a:else class="modal-content">
+    <view class="text-modal">
+      <text>¿Realmente deseas eliminar "{{myInfo.name}}" de tu lista de viajes?</text>
+    </view>
+    <view class="options">
+      <button class="backButton" onTap="deleteMenu">Conservar</button>
+      <button class="deleteButton" onTap="deletePlace">Eliminar</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="item" a:for="{{myData}}" a:key="index">
+  <text class="destination">{{item.name}}</text>
+  <view class="status">
+    <text class="status-icon green" a:if="{{item.status == "Visitado"}}">V</text>
+    <text class="status-icon orange" a:else>P</text>
+    <image class="arrow" data-value={{index}} onTap="showDetails" src="../images/arrow.png"/>
+  </view>
+</view>

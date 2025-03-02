@@ -1,0 +1,3 @@
+<view class="container">
+  <former myReq={{places[index]}} buttonInfo={{origin}} onSave="onSaveData"></former>
+</view>

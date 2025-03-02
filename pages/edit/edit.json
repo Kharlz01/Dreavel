@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "former": "/components/newForm/newForm"
+  },
+  "styleIsolation": "apply-shared"
+}

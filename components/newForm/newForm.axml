@@ -1,0 +1,39 @@
+<view>
+  <form onSubmit="formSubmit">
+    <view class="form-group">
+      <view class="separator">
+        <text class="label">NOMBRE*:</text>
+      </view>
+        <input class="input" name="name" placeholder="Ingrese el nombre" value="{{myReq.name}}"/>
+    </view>
+    
+    <view class="form-group">
+      <view class="separator">
+        <text class="label">DESCRIPCIÓN:</text>
+      </view>
+      <input class="input" name="description" placeholder="Ingrese una descripción" value="{{myReq.description}}"/>
+    </view>
+    
+    <view class="form-group">
+      <view class="separator">
+        <text class="label">ESTADO:</text>
+      </view>
+      <radio-group name="status" class="picker">
+        <label><radio value="Visitado" checked="{{myReq.status=="Visitado"}}" />Visitado</label>
+        <label><radio value="Pendiente" checked="{{myReq.status=="Pendiente"}}" />Pendiente</label>
+      </radio-group>
+    </view>
+
+    <view class="form-group">
+      <view class="separator">
+        <text class="label">IMAGEN:</text> 
+      </view>
+      <button class="upload-button" onTap="handleFile" a:if="{{ myReq.pic }}">Cambiar foto</button>
+      <button class="upload-button" onTap="handleFile" a:else>Agregar foto</button>
+    </view>
+    <view a:if="{{ flag }}">
+      <text class="warning"> {{message}} </text>
+    </view>
+    <button class="submit-button" form-type="submit">{{buttonInfo}}</button>
+  </form>
+</view>

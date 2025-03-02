@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/edit/edit",
+    "pages/cardInfo/cardInfo"
+  ],
+  "window": {
+    "defaultTitle": "Dreavel",
+    "titleBarColor": "#222"
+  }
+}

@@ -1,0 +1,64 @@
+.form-group {
+  margin-bottom: 40px;
+}
+
+.separator {
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.input {
+  height: 40px;
+  background-color: #0056b3;
+  width: 95%;
+  color: #fff;
+  padding: 0 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.picker {
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.upload-button {
+  background-color: #0056b3;
+  color: #fff;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
+  background-color: #56B300;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning {
+  height: 40px;
+  color: red;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
