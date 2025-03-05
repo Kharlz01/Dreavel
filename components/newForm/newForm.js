@@ -8,6 +8,10 @@ Component({
       type: String,
       value: "",
     },
+    opKey: {
+      type: Number,
+      value: 0,
+    },
   },
   mixins: [],
   data: {
@@ -23,13 +27,13 @@ Component({
   didUpdate() {},
   didUnmount() {},
   methods: {
-    
-    handleFile () {
+
+    handleFile() {
       my.chooseImage({
-        success:(res) => {
+        success: (res) => {
           console.log(res);
           this.setData({
-            filePath:res.apFilePaths[0]
+            filePath: res.apFilePaths[0]
           })
         }
       })
@@ -41,11 +45,15 @@ Component({
         key: 'dataBase'
       }).data;
 
-      let form = e.detail.value;
+      let form = e.detail.value; let duplicate = "";
 
-      const duplicate = myData.some(
-        (item) => item.name === form.name
-      );
+      if ((myData.length == this.props.opKey)){
+        duplicate = myData.some(
+          (item) => item.name === form.name
+        );
+      } else {
+        duplicate = 0;
+      }
 
       if (form.name == "") {
         this.setData({

@@ -1,7 +1,5 @@
 Page({
   data: {
-    // estados: ['Visitado', 'Pendiente'],
-    // selectedEstado: 'Visitado'
     places: [],
     origin: "",
     index: 0,
